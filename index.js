@@ -19,7 +19,6 @@ con.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
 });
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Add record using post
@@ -44,7 +43,7 @@ app.post("/add", (req, res) => {
             res.send("recoard add successfully");
           } else console.log(err2);
         });
-        // console.log(temp)
+        // console.log(temp)    
       } else console.log(err3);
     });
   });
@@ -99,7 +98,6 @@ app.get("/try", (req, res) => {
     } else console.log(err);
   });
 });
-
 app.listen("8080", () => {
   console.log("running");
 });
